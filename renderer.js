@@ -5,3 +5,13 @@
  * `contextIsolation` is turned on. Use the contextBridge API in `preload.js`
  * to expose Node.js functionality from the main process.
  */
+function screenshotWithRust(event) {
+  window.electron.screenshotWithRust(event.shiftKey);
+}
+
+function screenshotWithNiuNiu(event) {
+  window.electron.screenshotWithNiuNiu(event.shiftKey);
+}
+
+document.getElementById("screenshotWithRust").addEventListener("click", screenshotWithRust);
+document.getElementById("screenshotWithNiuNiu").addEventListener("click", screenshotWithNiuNiu);
