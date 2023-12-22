@@ -53,6 +53,21 @@ function createWindow() {
   // mainWindow.webContents.openDevTools()
 }
 
+ipcMain.handle("image-viewer", async (event, args) => {
+  const viewerWindow = new BrowserWindow({
+    width: 800,
+    height: 600,
+    webPreferences: {
+      webSecurity: false,
+      allowRunningInsecureContent: true,
+      images: true,
+    }
+  });
+
+  // and load the index.html of the app.
+  viewerWindow.loadFile("viewer.html");
+});
+
 ipcMain.handle("screenshot-niuniu", async (event, args) => {
   const screenShotExePath = path.join(
     __dirname,

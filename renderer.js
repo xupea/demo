@@ -13,5 +13,10 @@ function screenshotWithNiuNiu(event) {
   window.electron.screenshotWithNiuNiu(event.shiftKey);
 }
 
+function imageViewer(event) {
+  window.electron.imageViewer();
+}
+
 document.getElementById("screenshotWithRust").addEventListener("click", screenshotWithRust);
 document.getElementById("screenshotWithNiuNiu").addEventListener("click", screenshotWithNiuNiu);
+document.getElementById("imageViewer").addEventListener("click", imageViewer);

@@ -20,6 +20,7 @@
     "electron": "^28.0.0"
   },
   "dependencies": {
-    "electron-screenshots": "^0.5.26"
+    "electron-screenshots": "^0.5.26",
+    "viewerjs": "^1.11.6"
   }
 }

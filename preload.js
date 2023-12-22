@@ -23,6 +23,7 @@ window.addEventListener("DOMContentLoaded", () => {
 const electronHandler = {
   screenshotWithRust: (shiftKey) => ipcRenderer.invoke("screenshot-rust", shiftKey),
   screenshotWithNiuNiu: (shiftKey) => ipcRenderer.invoke("screenshot-niuniu", shiftKey),
+  imageViewer: (shiftKey) => ipcRenderer.invoke("image-viewer"),
 };
 
 contextBridge.exposeInMainWorld("electron", electronHandler);
